@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'foreign-alien-font-f43362';
+  src: url('../../ForeignAlienBold-Rpv9l.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/de96a427-aecc-41f3-8e1b-3a425360d246/dehpchz-346d0d58-6265-48f0-80f2-eced0c83f1bb.jpg/v1/fit/w_828,h_466,q_70,strp/coastal_custodians_by_sylviaritter_dehpchz-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2RlOTZhNDI3LWFlY2MtNDFmMy04ZTFiLTNhNDI1MzYwZDI0NlwvZGVocGNoei0zNDZkMGQ1OC02MjY1LTQ4ZjAtODBmMi1lY2VkMGM4M2YxYmIuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2aThiMmE5SOJZGxkuyfC-M_8WcFceEMjJwdaS9rGmpQ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f5f5f5;
+  font-family: 'neon-world-font-f97386', sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+.contact h1 {
+  font-family: "foreign-alien-font-f43362", sans-serif;
+  font-size: 4rem;
+  color: rgb(0, 255, 8);
+  margin-bottom: 2rem;
+}
+
+.icons {
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.icons a {
+  color: rgb(0, 255, 8);
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+}
+
+.icon {
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact h1 {
+    font-size: 3rem;
+  }
+
+  .icons {
+    gap: 2rem;
+  }
+
+  .icons a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h1 {
+    font-size: 2.5rem;
+  }
+
+  .icons {
+    gap: 1rem;
+  }
+
+  .icons a {
+    font-size: 1.2rem;
+  }
+}

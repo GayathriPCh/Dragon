@@ -1,0 +1,61 @@
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.circle {
+  position: absolute;
+  width: 20px; /* Circle size */
+  height: 20px; /* Circle size */
+  border-radius: 50%;
+  background-color: limegreen;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+}
+
+.ring {
+  position: absolute;
+  width: 55px; /* Ring size */
+  height: 55px; /* Ring size */
+  border: 2px solid rgb(28, 255, 8);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.second-ring {
+  position: absolute;
+  width: 90px; /* Ring size */
+  height: 90px; /* Ring size */
+  border: 5px solid rgb(28, 255, 8);
+  border-radius: 70%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.custom-cursor.hovered .ring {
+  width: 100px; /* Enlarged ring size on hover */
+  height: 100px; /* Enlarged ring size on hover */
+}
+
+/* Hide custom cursor on mobile devices */
+@media (max-width: 768px) {
+  body {
+    cursor: auto; /* Show default cursor */
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+}

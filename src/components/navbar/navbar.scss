@@ -1,0 +1,45 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  background-color: #0c0c1d; /* Example background color */
+  color: white; /* Text color */
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Ensure full width */
+    padding: 0 20px; /* Adjust padding as needed */
+    padding-left: 40px; /* Left padding */
+
+    @include mobile {
+      padding: 0 10px; /* Adjust mobile padding */
+      padding-left: 20px; /* Mobile left padding */
+      justify-content: flex-end;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1.5rem; /* Example font size */
+      /* Additional text styles */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @include mobile {
+      span {
+        font-size: 4rem; /* Adjust font size for mobile */
+      }
+    }
+
+    .social {
+      display: none; /* Remove social icons */
+    }
+  }
+}

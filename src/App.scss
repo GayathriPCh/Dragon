@@ -1,0 +1,65 @@
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Audiowide", sans-serif;
+  }
+  
+ 
+  body {
+    /* background-image: url('https://your-background-image-url.jpg'); */
+    background-color: #0c0c1d; 
+    color: rgb(0, 255, 8);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+    overflow: hidden;
+  }
+  
+  @mixin mobile {
+    @media (max-width: 738px) {
+      @content;
+    }
+  }
+  @mixin tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media (max-width: 1366px) {
+      @content;
+    }
+  }
+  /* app.scss */
+
+.footer {
+  background-color: #0f0f0f;
+  color: #9f9f9f;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin: 0;
+}

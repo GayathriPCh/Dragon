@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'fox-on-the-go-font-f108846';
+  src: url('../../FoxOnTheGoBoldItalic-gx9qP.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.services {
+  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9701e8b0-8750-409e-9ac3-27c9776ffb08/d9iodv6-4749609a-7b5e-4040-9df6-e6df92534c25.jpg/v1/fit/w_828,h_324,q_70,strp/space_travel_by_qauz_d9iodv6-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDgwIiwicGF0aCI6IlwvZlwvOTcwMWU4YjAtODc1MC00MDllLTlhYzMtMjdjOTc3NmZmYjA4XC9kOWlvZHY2LTQ3NDk2MDlhLTdiNWUtNDA0MC05ZGY2LWU2ZGY5MjUzNGMyNS5qcGciLCJ3aWR0aCI6Ijw9MTIzMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.uJc7CNQWhJ9_NWCNl_qEFr9ZCLES-T28Rpd3xRgRotA');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Ensure relative positioning for absolute positioning of glass effect */
+  
+    p {
+      font-size: 23px; /* Increase font size to 28px */
+      font-family: 'fox-on-the-go-font-f108846', sans-serif;
+      font-weight: 500;
+      color: #ffffff; /* White text color */
+      max-width: 80%;
+      margin: 0 auto; /* Center the paragraph */
+      position: relative; /* Maintain relative positioning for z-index */
+  
+      /* Glass effect */
+      background: rgba(0, 0, 0, 0.961); /* Semi-transparent white background */
+      backdrop-filter: blur(10px); /* Apply blur effect to simulate glass */
+      padding: 20px; /* Add padding for space around the text */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      letter-spacing: 0.10em;
+    }
+  
+    hr {
+      width: 50%;
+      border: none;
+      border-top: 1px solid #6effff; /* Light blue hr color */
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .titleContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+
+      img {
+        width: 200px; /* Increased profile picture size */
+        height: 200px; /* Increased profile picture size */
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #6effff; /* Light blue border */
+      }
+
+      h1 {
+        font-size: 36px;
+        font-family: 'fox-on-the-go-font-f108846', sans-serif;
+        background: rgba(0, 0, 0, 0.961); /* Semi-transparent white background */
+        backdrop-filter: blur(10px); /* Apply blur effect to simulate glass */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 10px 20px; /* Add padding for space around the text */
+        font-weight: 600;
+        color: #ffffff; /* Light blue text color */
+      }
+    }
+    .skillsContainer {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+      .skillItem {
+        background-color: rgba(30, 30, 30, 0.8); /* Dark semi-transparent background */
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        color: #a3ff6e; /* Light blue text color */
+        font-size: 30px;
+        font-family: 'fox-on-the-go-font-f108846', sans-serif;
+        font-weight: 500;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .box {
+      background-color: rgba(30, 30, 30, 0.8); /* Dark semi-transparent background */
+      padding: 20px;
+      border-radius: 10px;
+      width: calc(50% - 20px);
+      max-width: 300px;
+      color: #6effff; /* Light blue text color */
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      h2 {
+        font-size: 34px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 35px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #6effff; /* Light blue button background */
+        border: none;
+        border-radius: 5px;
+        color: #040404; /* Dark text color */
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #009688; /* Darker shade of blue on hover */
+          color: #ffffff; /* White text color on hover */
+        }
+      }
+    }
+  }
+
+  // Additional styles for the tools and technologies section
+  .toolsContainer {
+    margin-top: 20px;
+    text-align: center;
+
+    p {
+      font-size: 70px;
+      font-weight: 500;
+      color: #6effff; /* Light blue text color */
+      margin-bottom: 10px;
+    }
+
+    img {
+      margin: 5px; /* Adjust the spacing between icons */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .services {
+      padding: 30px; /* Adjust padding for smaller screens */
+    }
+    .textContainer p {
+      font-size: 18px; /* Adjust font size for readability */
+    }
+    .titleContainer .title {
+      font-size: 28px; /* Adjust font size for titles */
+    }
+    .listContainer .box {
+      width: 100%; /* Adjust width for full width on smaller screens */
+    }
+    .skillsContainer .skillItem {
+      font-size: 24px; /* Adjust font size for skills */
+    }
+    .toolsContainer p {
+      font-size: 40px; /* Adjust font size for large headings */
+    }
+  }
+  
+  // Add more specific styles as needed
+}

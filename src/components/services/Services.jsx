@@ -51,7 +51,7 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-        Greetings, Earthlings. <br />  I am Gayathri,a computer science student from the far reaches of the tech universe.
+          Greetings, Earthlings. <br /> I am Gayathri, a computer science student from the far reaches of the tech universe.
         </p>
         <hr />
       </motion.div>
@@ -61,15 +61,24 @@ const Services = () => {
           <h1>Skills and Expertise</h1>
         </div>
         <div className="skillsContainer">
-          {skills.map((skill, index) => (
-            <div key={index} className="skillItem">
-              {skill}
-            </div>
-          ))}
+          <div className="skillsRow scrollRight">
+            {skills.map((skill, index) => (
+              <div key={index} className="skillItem">
+                {skill}
+              </div>
+            ))}
+          </div>
+          <div className="skillsRow scrollLeft">
+            {skills.map((skill, index) => (
+              <div key={index} className="skillItem">
+                {skill}
+              </div>
+            ))}
+          </div>
         </div>
         <motion.div className="textContainer" variants={variants}>
           <p>
-          My mission involves crafting intricate web designs, exploring the depths of artificial intelligence, navigating the vast clouds of computing, uncovering the secrets of blockchain, and fortifying the realms of cybersecurity. Join me in discussing the most groundbreaking trends that are propelling the future of your technological world.
+            My mission involves crafting intricate web designs, exploring the depths of artificial intelligence, navigating the vast clouds of computing, uncovering the secrets of blockchain, and fortifying the realms of cybersecurity. Join me in discussing the most groundbreaking trends that are propelling the future of your technological world.
           </p>
           <hr />
         </motion.div>

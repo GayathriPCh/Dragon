@@ -32,6 +32,17 @@ const Hero = () => {
     setShowIframe(!showIframe);
   };
 
+  const downloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "../hero/cv.pdf"; // Update this to the path of your CV file
+    link.download = "Gayathri_P_CV.pdf";
+    link.click();
+  };
+
+  const connectLinkedIn = () => {
+    window.location.href = "https://www.linkedin.com/in/gayathri-pch/"; // Update this to your LinkedIn profile URL
+  };
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -44,12 +55,14 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>GAYATHRI P</motion.h2>
           <motion.h1 variants={textVariants}>19 year old tech enthusiast</motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants} onClick={toggleIframe}>
-              Explore More
+            <motion.button variants={textVariants} onClick={downloadCV}>
+              Download CV
             </motion.button>
             <br />
             <br />
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} onClick={connectLinkedIn}>
+              Let's connect linkedin
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -58,12 +71,10 @@ const Hero = () => {
             alt=""
           />
         </motion.div>
-        
       </div>
       <div className="imageContainer">
         <img src="/hero.png" alt="" />
       </div>
-     
     </div>
   );
 };

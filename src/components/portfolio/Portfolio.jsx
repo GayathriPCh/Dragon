@@ -6,7 +6,7 @@ import p2 from './p2.png';
 import p3 from './p3.png';
 import p4 from './p4.jpg';
 import p5 from './p5.png';
-const items = [
+const projects = [
   {
     id: 1,
     title: "SkyQuest (Jan 2024)",
@@ -44,14 +44,11 @@ const items = [
   },
  
 ];
-
 const Single = ({ item }) => {
   const ref = useRef();
-
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
@@ -59,14 +56,16 @@ const Single = ({ item }) => {
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt="" />
+            <img src={item.img} alt={item.title} />
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <button>Check this out</button>
-            </a>
+            {item.link && (
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <button>Check this out</button>
+              </a>
+            )}
           </motion.div>
         </div>
       </div>
@@ -74,14 +73,34 @@ const Single = ({ item }) => {
   );
 };
 
+const Projects = () => {
+  return (
+    <div className="projects">
+      <h2 className="center-title">Projects</h2>
+      {projects.map((item) => (
+        <Single item={item} key={item.id} />
+      ))}
+    </div>
+  );
+};
+
+const Blogs = () => {
+  return (
+    <div className="blogs">
+      <h2 className="center-title">Blogs</h2>
+      {blogs.map((item) => (
+        <Single item={item} key={item.id} />
+      ))}
+    </div>
+  );
+};
+
 const Portfolio = () => {
   const ref = useRef();
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "start start"],
   });
-
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -90,12 +109,11 @@ const Portfolio = () => {
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        <h1 style={{ fontFamily: "'necosmic-font-f107950', sans-serif" }}>Stellar Archive</h1>
+        <h1 style={{ fontFamily: "'necosmic-font-f107950', sans-serif" }}>Steller Archive</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
-      {items.map((item) => (
-        <Single item={item} key={item.id} />
-      ))}
+      <Projects />
+  
     </div>
   );
 };

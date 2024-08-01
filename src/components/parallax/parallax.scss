@@ -36,17 +36,4 @@
     z-index: 1;
   }
 
-  @media (max-width: 768px) {
-    /* Adjustments for tablets and smaller screens */
-    h1 {
-      font-size: 120px; /* Example adjustment for tablets */
-    }
-  }
-
-  @media (max-width: 480px) {
-    /* Adjustments for mobile phones */
-    h1 {
-      font-size: 48px; /* Example adjustment for smaller mobile screens */
-    }
-  }
 }

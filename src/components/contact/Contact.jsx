@@ -55,15 +55,7 @@ const StyledIcon = styled(motion.a)`
   }
 `;
 
-// Styled component for footer
-const StyledFooter = styled(motion.footer)`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  padding: 1rem;
-`;
+
 
 const Contact = () => {
   return (

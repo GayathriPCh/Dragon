@@ -87,42 +87,29 @@
 
     .skillsContainer {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-    
-      .skillsRow {
-        display: flex;
-        overflow: hidden;
-        white-space: nowrap;
-    
-        &.scrollRight {
-          animation: scrollRight 20s linear infinite;
-        }
-    
-        &.scrollLeft {
-          animation: scrollLeft 20s linear infinite;
-        }
-    
-        .skillItem {
-          display: inline-block;
-          background-color: rgba(30, 30, 30, 0.8);
-          padding: 10px;
-          border-radius: 10px;
-          text-align: center;
-          color: #a3ff6e;
-          font-size: 30px;
-          font-family: 'fox-on-the-go-font-f108846', sans-serif;
-          font-weight: 500;
-          margin-right: 20px;
-          transition: transform 0.3s ease;
-    
-          &:hover {
-            transform: translateY(-5px);
-          }
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative; /* Ensure relative positioning for child elements */
+      animation: scroll 20s linear infinite;
+
+      .skillItem {
+        display: inline-block;
+        background-color: rgba(30, 30, 30, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        color: #a3ff6e;
+        font-size: 30px;
+        font-family: 'fox-on-the-go-font-f108846', sans-serif;
+        font-weight: 500;
+        margin-right: 20px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
         }
       }
     }
-    
   }
 
   .listContainer {
@@ -212,22 +199,12 @@
     }
   }
 
-  @keyframes scrollRight {
+  @keyframes scroll {
     0% {
-      transform: translateX(0%);
+      transform: translateX(30%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-30%);
     }
   }
-  
-  @keyframes scrollLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  
 }

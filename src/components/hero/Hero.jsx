@@ -1,6 +1,6 @@
 import "./hero.scss";
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const textVariants = {
   initial: {
@@ -24,25 +24,21 @@ const textVariants = {
     },
   },
 };
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror",
+      duration: 20,
+    },
+  },
+};
 
 const Hero = () => {
-  const [showIframe, setShowIframe] = useState(false);
-
-  const toggleIframe = () => {
-    setShowIframe(!showIframe);
-  };
-
-  const downloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "../hero/cv.pdf"; // Update this to the path of your CV file
-    link.download = "Gayathri_P_CV.pdf";
-    link.click();
-  };
-
-  const connectLinkedIn = () => {
-    window.location.href = "https://www.linkedin.com/in/gayathri-pch/"; // Update this to your LinkedIn profile URL
-  };
-
   return (
     <div className="hero">
       <div className="wrapper">
@@ -52,17 +48,18 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>GAYATHRI P</motion.h2>
-          <motion.h1 variants={textVariants}>19 year old tech enthusiast</motion.h1>
+          <motion.h2 variants={textVariants}>Gayathri P</motion.h2>
+          <motion.h1 variants={textVariants}>
+            19 year old tech enthusiast
+          </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants} onClick={downloadCV}>
-              Download CV
-            </motion.button>
-            <br />
-            <br />
-            <motion.button variants={textVariants} onClick={connectLinkedIn}>
-              Let's connect linkedin
-            </motion.button>
+            <Link to="Portfolio" smooth={true} duration={500}>
+              <motion.button variants={textVariants}>Explore More</motion.button>
+            </Link>
+            <br /> <br />
+            <Link to="Contact" smooth={true} duration={500}>
+              <motion.button variants={textVariants}>Contact Me</motion.button>
+            </Link>
           </motion.div>
           <motion.img
             variants={textVariants}
